@@ -28,9 +28,11 @@ export default function App() {
     localStorage.removeItem('wano.admin.name');
   };
 
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
   if (!token) {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="*" element={<Login onLogin={handleLogin} />} />
         </Routes>
@@ -39,7 +41,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ToastProvider>
         <Routes>
           <Route element={<Layout userName={userName} onLogout={handleLogout} />}>

@@ -1,4 +1,10 @@
-# WANO Rewards — RVM 回收积分 App + 运营后台（可部署）
+﻿# WANO Rewards — RVM 回收积分 App + 运营后台（可部署）
+
+[![CI](https://github.com/wanojonylee/wano-rewards/actions/workflows/ci.yml/badge.svg)](https://github.com/wanojonylee/wano-rewards/actions/workflows/ci.yml)
+[![Deploy GitHub Pages](https://github.com/wanojonylee/wano-rewards/actions/workflows/pages.yml/badge.svg)](https://github.com/wanojonylee/wano-rewards/actions/workflows/pages.yml)
+
+**在线演示：** 用户端 <https://wanojonylee.github.io/wano-rewards/> · 运营后台 <https://wanojonylee.github.io/wano-rewards/admin/> （纯前端 demo 模式，数据为内置 mock）
+
 
 面向 **Reverse Vending Machine（反向售货机 / 空瓶回收机）** 投瓶用户的积分与返现产品，由
 **WANO Intelligent Technology** 运营。业务闭环：**扫码投瓶 → 积分 + 现金返现 → 兑换 / 迷你超市 / PIX 提现 → 品牌活动与公寓排行榜**。
@@ -146,6 +152,7 @@ wano-rewards/
 
 > 品牌说明：**WANO Rewards** 为产品名，**RecIO 1000** 为整机型号，运营主体为 WANO Intelligent Technology。
 > 后端包名/数据库/API 前缀保留 `recio` 仅为兼容既有部署，不影响对外品牌。
+
 
 
 
