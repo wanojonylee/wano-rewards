@@ -1,4 +1,4 @@
-﻿# WANO Rewards — RVM 回收积分 App + 运营后台（可部署）
+# WANO Rewards — RVM 回收积分 App + 运营后台（可部署）
 
 面向 **Reverse Vending Machine（反向售货机 / 空瓶回收机）** 投瓶用户的积分与返现产品，由
 **WANO Intelligent Technology** 运营。业务闭环：**扫码投瓶 → 积分 + 现金返现 → 兑换 / 迷你超市 / PIX 提现 → 品牌活动与公寓排行榜**。

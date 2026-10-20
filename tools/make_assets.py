@@ -1,4 +1,4 @@
-﻿from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 import os, math
 
 OUT = os.path.join(os.path.dirname(__file__), "assets")

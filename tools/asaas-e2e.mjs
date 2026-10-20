@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Asaas-adapter end-to-end check against the local Asaas v3 simulator.
  *
  * Env:

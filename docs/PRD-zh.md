@@ -1,4 +1,4 @@
-﻿# WANO Rewards 用户端 App 产品需求文档（PRD）
+# WANO Rewards 用户端 App 产品需求文档（PRD）
 
 ## 1. 文档信息
 

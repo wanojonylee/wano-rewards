@@ -1,4 +1,4 @@
-﻿# 部署指南（RecIO Rewards）
+# 部署指南（RecIO Rewards）
 
 目标：把 `apps/api` 与 `apps/mobile` 部署成一套可试点、可复制的环境。演示环境 10 分钟可上线，生产环境按第 6 节清单逐项收口。
 

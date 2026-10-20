@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Demo seed. Idempotent full reset: `npm run seed`.
  *
  * Produces the dataset the mobile app demo relies on:

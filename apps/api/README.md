@@ -1,4 +1,4 @@
-﻿# RecIO Rewards API
+# RecIO Rewards API
 
 Production-shaped REST API for the RecIO Rewards mobile app (reverse vending
 machines, recycling points, cashback, rewards and Pix payouts in Brazil).

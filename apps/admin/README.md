@@ -1,4 +1,4 @@
-﻿# WANO Rewards — admin (operations dashboard)
+# WANO Rewards — admin (operations dashboard)
 
 Vite + React + TypeScript dashboard for the people running the recycling network:
 PIX payouts, redemption fulfilment, campaigns, rewards, fleet status and deposits.
