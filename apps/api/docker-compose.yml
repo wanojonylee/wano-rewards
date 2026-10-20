@@ -1,0 +1,52 @@
+# RecIO Rewards API — single-node deployment with a persistent SQLite volume.
+#
+#   cp .env.example .env      # set JWT_SECRET (required) and optional Stripe keys
+#   docker compose up -d --build
+#   curl http://localhost:8787/health
+#
+# SQLite requires a single replica with a local, persistent disk. Scale the API
+# out only after migrating to Postgres (see README).
+services:
+  api:
+    build: .
+    image: recio-api:local
+    container_name: recio-api
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      NODE_ENV: production
+      PORT: "8787"
+      HOST: 0.0.0.0
+      DB_PATH: /app/data/recio.db
+      # Compose fails fast if JWT_SECRET is missing from .env.
+      JWT_SECRET: ${JWT_SECRET:?Defina JWT_SECRET no arquivo .env}
+      AUTH_DEV_MODE: ${AUTH_DEV_MODE:-true}
+      DEMO_MODE: ${DEMO_MODE:-true}
+      AUTO_SEED: ${AUTO_SEED:-true}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      STRIPE_CURRENCY: ${STRIPE_CURRENCY:-brl}
+      CORS_ORIGINS: ${CORS_ORIGINS:-}
+      SUPPORT_EMAIL: ${SUPPORT_EMAIL:-ajuda@recio.com.br}
+      PUBLIC_WEB_URL: ${PUBLIC_WEB_URL:-https://recio.app}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      LOG_JSON: ${LOG_JSON:-true}
+      TRUST_PROXY: ${TRUST_PROXY:-false}
+    volumes:
+      - recio-data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:8787/health').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  recio-data:

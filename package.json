@@ -1,0 +1,24 @@
+{
+  "name": "wano-rewards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WANO Rewards — recycling rewards app + operations dashboard for Reverse Vending Machines (Expo, Express, Vite, Stripe/PIX)",
+  "scripts": {
+    "install:all": "npm --prefix apps/api install && npm --prefix apps/mobile install && npm --prefix apps/admin install",
+    "api:seed": "npm --prefix apps/api run seed",
+    "api:dev": "npm --prefix apps/api run dev",
+    "api:test": "npm --prefix apps/api test",
+    "api:build": "npm --prefix apps/api run build",
+    "mobile:start": "npm --prefix apps/mobile start",
+    "mobile:web": "npm --prefix apps/mobile run web",
+    "mobile:typecheck": "npm --prefix apps/mobile run typecheck",
+    "mobile:export:web": "npm --prefix apps/mobile run export:web",
+    "admin:dev": "npm --prefix apps/admin run dev",
+    "admin:build": "npm --prefix apps/admin run build",
+    "admin:typecheck": "npm --prefix apps/admin run typecheck",
+    "verify:api": "node tools/verify-api.mjs",
+    "screenshots": "node tools/screenshot.mjs"
+  }
+}
+
+

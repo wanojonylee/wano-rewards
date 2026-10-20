@@ -1,0 +1,42 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+dist/
+apps/mobile/dist/
+apps/api/dist/
+.expo/
+.expo-shared/
+web-build/
+
+# local env & secrets
+.env
+.env.*
+!.env.example
+
+# databases & generated exports
+apps/api/data/*.db
+apps/api/data/*.db-shm
+apps/api/data/*.db-wal
+apps/api/data/exports/
+apps/api/data/test-*.db*
+
+# tooling caches / local state
+.npm-cache/
+.expo-home/
+.home/
+.chrome-profile/
+chrome-profile*/
+tools/chrome-profile*/
+install.log
+export*.log
+*.log
+server.log
+test-run.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

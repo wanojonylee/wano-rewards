@@ -1,0 +1,49 @@
+﻿{
+  "expo": {
+    "name": "WANO Rewards",
+    "slug": "wano-rewards",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "wano",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F4ED"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wano.recio",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Scan the QR code on the RVM to start a recycling session."
+      }
+    },
+    "android": {
+      "package": "com.wano.recio",
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0C3B2A"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow RecIO to scan the RVM QR code."
+        }
+      ]
+    ]
+  }
+}
+

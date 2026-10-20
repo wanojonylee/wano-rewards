@@ -1,0 +1,10 @@
+﻿{
+  "name": "recio-tools",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "puppeteer-core": "^24.0.0",
+    "serve": "^14.2.4"
+  }
+}
